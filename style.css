@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    line-height: 1.4;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgb(34, 34, 76), rgb(82, 16, 16));
+}
+.card{
+    background: white;
+    border-radius: 20px;
+    width: 470px;
+    max-width: 90%;
+    margin: 100px auto 0;
+    padding: 30px 20px 40px;
+}
+.header{
+    display: flex;
+    color: #061b60;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.header img{
+    width: 30px;
+}
+.search{
+    display: flex;
+    background: rgb(219, 217, 217);
+    border-radius: 40px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.search input{
+    padding: 20px 15px;
+    font-size: 15px;
+    border-radius: 30px;
+    border: none;
+    flex: 1;
+    background: transparent;
+    outline: 0;
+}
+.add{
+    background: rgb(227, 106, 26);
+    padding: 10px 40px;
+    border-radius: 40px;
+    border: none;
+    font-size: 15px;
+    color: white;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0 0 0 50px;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+li::before{
+    content: "";
+    background-image: url(Images/unchecked.png);
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 8px;
+    bottom: -2px;
+    border-radius: 50%;
+}
+li.checked{
+    color: #555;
+    text-decoration: line-through;
+   
+}
+li.checked::before{
+    background-image: url(./Images/checked.png);
+}
+li span{
+    position: absolute;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    bottom: -10px;
+    border-radius: 50%;
+    text-align: center;
+}
+li span:hover{
+    cursor: pointer;
+    background: rgb(219, 217, 217);
+}
